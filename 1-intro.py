@@ -1,1 +1,2 @@
-a = 'hello world'
+x = input("say:")
+print(x)
