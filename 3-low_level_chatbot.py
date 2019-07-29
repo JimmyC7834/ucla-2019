@@ -11,11 +11,9 @@ else:
 import wordList
 
 name = input("what is your name? ")
-print('Hi, ',name,', nice to meet you')
-print('')
+print('Hi, ',name,', nice to meet you \n')
 age = input("how old are you? ")
-print('So you\'re ',age,' years old.')
-print('')
+print('So you\'re ',age,' years old. \n')
 
 while True:
     status = input(name+', how are you? ')
@@ -26,6 +24,5 @@ while True:
     elif status in wordList.badWords:
         print('sorry for hearing that, see you next time')
         break
-    print('I don\'t understand what you are saying...')
-    print('')
+    print('I don\'t understand what you are saying... \n')
 
