@@ -5,3 +5,4 @@ def getMax(arr):
     return arr[index]
 
 print(getMax([1,5,3,8,4,199,1,3,4,8,9,24]))
+
