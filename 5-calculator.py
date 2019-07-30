@@ -35,7 +35,7 @@ def power(x,y):
     return x**y
 
 def sqrt(x,_):
-    return x*(.5)
+    return x**(.5)
 
 def factorial(x,_):
     ans = x
@@ -54,30 +54,31 @@ def fibonacci(x,_):
     return b
 
 OPS = {
-    '0':add,
-    '1':subtract,
-    '2':multiply,
-    '3':divide,
-    '4':power,
-    '5':sqrt,
-    '6':factorial,
-    '7':fibonacci
+    '0':(add,'a + b ='),
+    '1':(subtract,'a - b ='),
+    '2':(multiply,'a * b ='),
+    '3':(divide,'a / b ='),
+    '4':(power,'a ^ b ='),
+    '5':(sqrt,'a ^ 0.5 ='),
+    '6':(factorial,'a! ='),
+    '7':(fibonacci,'the a th term of fibonacci sequence is:')
 }
 
 while True:
     for i,v in OPS.items():
-        print(' ',i,' - ',v.__name__)
-    print("Enter a number to choose an operation: \n")
+        print(' ',i,' - ',v[0].__name__)
+    print("Enter a number to choose an operation:")
     op = input()
     if int(op) in range(8):
+        print('You choose',OPS[op][0].__name__,'operation.\n')
         break
     else:
-        print(" invalid input \n")
+        print("\n\n\n* * * * * invalid input * * * * *\n\n")
 
 a = int(input("Enter your first input: "))
-b = int(input("Enter your second input: "))
+b = int(input("Enter your second input: ")) if int(op) < 5 else 0
 
-print('answer: ',OPS[op](a,b))
+print('\n',OPS[op][1],OPS[op][0](a,b))
 
 
 #END OF CALCULATOR
