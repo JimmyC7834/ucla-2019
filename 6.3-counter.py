@@ -21,6 +21,5 @@ c = collections.Counter()
 
 for w in s.split(' '):
     c[w] += 1
-print(c)
 for k,v in sorted(c.items(), key=lambda item: item[1], reverse = True):
     print(k,v)
