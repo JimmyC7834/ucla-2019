@@ -40,7 +40,7 @@ def getComputerMove():
     actual_move = potential_moves[random.randint(0,2)]
     return actual_move
 
-def resolveMoves(player_move,computer_move):   
+def resolveMoves(computer_move,player_move):   
     # return 'w' if the player won, 't' in case of a tie, and 'l' if the player lost
     if player_move == 'r' and computer_move == 's':
         return 'w'
@@ -71,7 +71,7 @@ def main():
         #Pay close attention to how we defined the other 3 functions, and whether they are being used as intended
         player_move = askForMove()
 
-        computer_move = getComputerMove
+        computer_move = getComputerMove()
         print("The computer played",computer_move,".")
 
         if player_move == 'q':
